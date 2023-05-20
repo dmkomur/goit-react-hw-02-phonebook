@@ -39,7 +39,7 @@ export class App extends React.Component {
       filters: event.target.value,
     });
   };
-  render = () => {
+  render() {
     const filteredContacts = this.state.contacts.filter(el =>
       el.name.toLowerCase().includes(this.state.filters.toLocaleLowerCase())
     );
@@ -55,5 +55,5 @@ export class App extends React.Component {
         <ContactList fileList={filteredContacts} onDelete={this.handleDelete} />
       </div>
     );
-  };
+  }
 }
